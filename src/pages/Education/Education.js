@@ -14,11 +14,12 @@ const Education = ({ user }) => {
               <Institution>{education.position}</Institution>
               <div>
                 <Degree>
-                  {education.studyType}, {education.area}
+                  {education.institution}, {education.area}
                 </Degree>{' '}
                 <span> &sdot; </span>
                 <span>
-                  {education.start.year} to {education.end.year}
+                  {education.end.year >= 2020 ? <span>{education.start.year} - PRESENT</span>
+                   : <span>{education.start.year} - {education.end.year}</span>}
                 </span>
               </div>
               <Paragraph>{education.description.replace('\n\n', '\n')}</Paragraph>
@@ -31,3 +32,5 @@ const Education = ({ user }) => {
 };
 
 export default Education;
+
+//{education.start.year} to {education.end.year}

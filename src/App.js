@@ -5,7 +5,7 @@ function App() {
   const [user, setUser] = useState(null);
   useEffect(() => {
     // NOTE: Use your username below
-    fetch('https://gitconnected.com/v1/portfolio/dmire')
+    fetch('https://gitconnected.com/v1/portfolio/demskyre')
       .then(res => res.json())
       .then(user => {
         setUser(user);
@@ -20,16 +20,3 @@ function App() {
 }
 
 export default App;
-
-/*
-function App() {
-  const [user, setUser] = useState(null);
-  useEffect(() => {
-    // NOTE: Use your username below
-    fetch('https://gitconnected.com/v1/portfolio/treyhuffine')
-      .then(res => res.json())
-      .then(user => {
-        setUser(user);
-      });
-  }, []);
-*/

@@ -11,11 +11,22 @@ const Me = ({ user }) => {
         <Paragraph>{user.basics.summary}</Paragraph>
       </div>
       <div>
-        <SectionTitle>Skills</SectionTitle>
+        <SectionTitle>Technical Skills</SectionTitle>
         <div>
           {user.skills.map(skill => (
-            <Pill key={skill.name}>{skill.name}</Pill>
+            <Pill key={skill.name}>{skill.name} [{skill.level}]</Pill>
           ))}
+        </div>
+      </div>
+      <div>
+        <SectionTitle>Soft Skills</SectionTitle>
+        <div>
+        <Pill>Communication</Pill>
+        <Pill>Teamwork</Pill>
+        <Pill>Approachability</Pill>
+        <Pill>Patience</Pill>
+        <Pill>Problem Solving</Pill>
+        <Pill>Creativity</Pill>
         </div>
       </div>
       <div>
@@ -29,6 +40,10 @@ const Me = ({ user }) => {
               </a>
             </ProfileLink>
           ))}
+          <ProfileLink> | <a href="" target="_blank" rel="noreferrer noopener">
+              LinkedIn
+            </a>
+          </ProfileLink>
         </ul>
       </div>
     </Layout>
